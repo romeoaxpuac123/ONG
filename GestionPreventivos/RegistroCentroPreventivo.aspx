@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Centro Preventivo</title>
+	<title>REGISTRO DELITO</title>
    <!--Made with love by Mutiullah Samim -->
    
 	<!--Bootsrap 4 CDN-->
@@ -27,7 +27,7 @@
 		<div class="card">
 			<div class="card-header">
 				<h3>REGISTRO</h3>
-                <h3>CENTRO PREVENTIVO</h3>
+                <h3>PREVENTIVO</h3>
                 <!--
 				<div class="d-flex justify-content-end social_icon">
 					<span><i class="fab fa-facebook-square"></i></span>
@@ -40,26 +40,35 @@
 				<form id="form1" runat="server">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-						 <!--	<span class="input-group-text"><i class="fas fa-user"></i></span>-->
+						 <!--	<span class="input-group-text"><i class="fas fa-user"></i></span> -->
 						</div>
-						<input type="text" class="form-control" placeholder="NOMBRE" autocomplete="off">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 						 <!--	<span class="input-group-text"><i class="fas fa-key"></i></span> -->
-						</div>
-						<input type="text" class="form-control" placeholder="DIRECCION" autocomplete="off">
+                            <center>
+                                
+						    <asp:TextBox type="text" class="form-control" placeholder="NOMBRE" autocomplete="off" ID="TextBox1" runat="server" Style="text-transform: uppercase"></asp:TextBox>
+						    <br />
+                            </div>
+                            <div class="input-group-prepend">
+                                <br /><br /><br />
+                            <asp:TextBox type="text" class="form-control" placeholder="DIRECCION" autocomplete="off"  ID="TextBox2" runat="server"></asp:TextBox>
+						
+                            </div>
+                        </center>
+						<!--<input type="password" class="form-control" placeholder="DESCRIPCION" autocomplete="off">-->
 					</div>
 					
 					<div class="form-group">
-						 <asp:Button type="submit" value="INICIO" class="btn float-right login_btn" ID="Button1" runat="server" OnClick="Button1_Click" Text="REGISTRAR" />
-				
+						  <asp:Button type="submit" value="INICIO" class="btn float-right login_btn" ID="Button1" runat="server" OnClick="Button1_Click1" Text="REGISTRO" />
 					</div>
 				</form>
 			</div>
 			
 		</div>
+	    <br />
 	</div>
 </div>
 </body>

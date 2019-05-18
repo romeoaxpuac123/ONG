@@ -55,10 +55,14 @@ namespace GestionPreventivos
             {
                 RegistrarDelito(TextBox1.Text, TextBox2.Text);
                 MessageBox.Show(TextBox1.Text + " Registrado");
+                TextBox2.Text = "";
+                TextBox1.Text = "";
             }
             else
             {
                 MessageBox.Show("DELITO PREVIAMENTE REGISTRADO");
+                TextBox2.Text = "";
+                TextBox1.Text = "";
             }
         }
 
