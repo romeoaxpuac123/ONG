@@ -135,6 +135,7 @@
     <Content Include="INICIO.aspx" />
     <Content Include="RegistroCentroPreventivo.aspx" />
     <Content Include="RegistroDelito.aspx" />
+    <Content Include="RegistroPrivado.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -219,6 +220,13 @@
     <Compile Include="RegistroDelito.aspx.designer.cs">
       <DependentUpon>RegistroDelito.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RegistroPrivado.aspx.cs">
+      <DependentUpon>RegistroPrivado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroPrivado.aspx.designer.cs">
+      <DependentUpon>RegistroPrivado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -233,6 +241,7 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Content Include="Styles2.css" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

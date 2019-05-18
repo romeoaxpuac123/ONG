@@ -20,7 +20,18 @@ namespace GestionPreventivos
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            MessageBox.Show("DEPOSITO REALIZADO CON EXITO");
+           if(TextBox1.Text == "MILTON" && TextBox2.Text =="MILTON")
+            {
+                MessageBox.Show("BIENVENIDO");
+                TextBox1.Text = "";
+                TextBox2.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("DATOS INCORRECTOS");
+                TextBox1.Text = "";
+                TextBox2.Text = "";
+            }
         }
     }
 }
