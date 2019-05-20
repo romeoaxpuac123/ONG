@@ -70,7 +70,7 @@
 					 </div>
 					
 					<div class="form-group">
-						  <asp:Button type="submit" value="REGISTRO class="btn float-right login_btn" ID="Button1" runat="server" OnClick="Button1_Click1" Text="INICIO" />
+						  <asp:Button type="submit" value="REGISTRO" class="btn float-right login_btn" ID="Button1" runat="server" OnClick="Button1_Click1" Text="INICIO" />
 					</div>
 				</form>
 			</div>
