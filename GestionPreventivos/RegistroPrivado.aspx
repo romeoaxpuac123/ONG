@@ -25,8 +25,7 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>REGISTRO</h3>
-                <h3>PRIVADO</h3>
+				<h3>REGISTRO PRIVADO</h3>
                 <!--
 				<div class="d-flex justify-content-end social_icon">
 					<span><i class="fab fa-facebook-square"></i></span>
@@ -65,11 +64,36 @@
 							<span class="input-group-text"><i class="fas fa-door-closed"></i></span>
                           
 						</div>
-                        <asp:ListBox Rows="1"  class="form-control" ID="ListBox1" runat="server" Style="text-transform: uppercase" DataSourceID="SqlDataSource1" DataTextField="NOMBRE_PREVENTIVO" DataValueField="NOMBRE_PREVENTIVO" ></asp:ListBox>
-					    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BDONGConnectionString %>" SelectCommand="SELECT [NOMBRE_PREVENTIVO] FROM [CentroPreventivo]"></asp:SqlDataSource>
+                        <asp:ListBox Rows="1" ColumnHeads = true placeholder="PREVENTIVO" class="form-control" ID="ListBox1" runat="server" Style="text-transform: uppercase" DataSourceID="SqlDataSource1" DataTextField="NOMBRE_PREVENTIVO" DataValueField="NOMBRE_PREVENTIVO" ></asp:ListBox>
+					    
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BDONGConnectionString %>" SelectCommand="SELECT [NOMBRE_PREVENTIVO] FROM [CentroPreventivo]"></asp:SqlDataSource>
+                        
 					 </div>
 					
-					<div class="form-group">
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                          
+						</div>
+                             <asp:ListBox Rows="1" placeholder="FICHA" class="form-control" ID="ListBox2" runat="server" Style="text-transform: uppercase" AutoPostBack="True" >
+                                 <asp:ListItem>FICHA</asp:ListItem>
+                                 <asp:ListItem>SI</asp:ListItem>
+                                 <asp:ListItem>NO</asp:ListItem>
+                        </asp:ListBox>
+                    </div>
+                     <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-desktop"></i></span>
+                          
+						</div>
+                        <asp:ListBox  Rows="1" placeholder="COMPUTO"  class="form-control" ID="ListBox3" runat="server"  Style="text-transform: uppercase" AutoPostBack="True">
+                            <asp:ListItem>COMPUTO</asp:ListItem>
+                            <asp:ListItem>SI</asp:ListItem>
+                            <asp:ListItem>NO</asp:ListItem>
+                         </asp:ListBox>
+				    </div>	
+                         
+                         <div class="form-group">
 						  <asp:Button type="submit" value="REGISTRO" class="btn float-right login_btn" ID="Button1" runat="server" OnClick="Button1_Click1" Text="INICIO" />
 					</div>
 				</form>
