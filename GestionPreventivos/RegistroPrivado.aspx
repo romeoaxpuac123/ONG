@@ -64,7 +64,7 @@
 							<span class="input-group-text"><i class="fas fa-door-closed"></i></span>
                           
 						</div>
-                        <asp:ListBox Rows="1" ColumnHeads = true placeholder="PREVENTIVO" class="form-control" ID="ListBox1" runat="server" Style="text-transform: uppercase" DataSourceID="SqlDataSource1" DataTextField="NOMBRE_PREVENTIVO" DataValueField="NOMBRE_PREVENTIVO" ></asp:ListBox>
+                        <asp:ListBox Rows="1" ColumnHeads = true placeholder="PREVENTIVO" class="form-control" ID="ListBox1" runat="server" Style="text-transform: uppercase" DataSourceID="SqlDataSource1" DataTextField="NOMBRE_PREVENTIVO" DataValueField="NOMBRE_PREVENTIVO" AutoPostBack="True" ></asp:ListBox>
 					    
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BDONGConnectionString %>" SelectCommand="SELECT [NOMBRE_PREVENTIVO] FROM [CentroPreventivo]"></asp:SqlDataSource>
                         
@@ -94,7 +94,7 @@
 				    </div>	
                          
                          <div class="form-group">
-						  <asp:Button type="submit" value="REGISTRO" class="btn float-right login_btn" ID="Button1" runat="server" OnClick="Button1_Click1" Text="INICIO" />
+						  <asp:Button type="submit" value="REGISTRO" class="btn float-right login_btn" ID="Button1" runat="server" OnClick="Button1_Click1" Text="REGISTRO" />
 					</div>
 				</form>
 			</div>

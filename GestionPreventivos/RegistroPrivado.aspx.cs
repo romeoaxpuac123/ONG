@@ -22,10 +22,19 @@ namespace GestionPreventivos
             DateTime thisDay = DateTime.Today;
             if (ExisteUsuario(TextBox1.Text, CodigoCentroCarcelario(ListBox1.Text))==false)
             {
-                InsertarPrivado(NumeroExpediente(CodigoCentroCarcelario(ListBox1.Text), thisDay.Year),
-                thisDay.Year, TextBox1.Text, TextBox2.Text, TextBox3.Text, CodigoCentroCarcelario(ListBox1.Text));
 
-                MessageBox.Show("PRIVADO REGISTRADO");
+                if (ListBox2.Text == "FICHA" || ListBox3.Text == "COMPUTO")
+                {
+                    MessageBox.Show("SELECCIONE CORRECTAMENTE FICHA O COMPUTO");
+                }
+                else
+                {
+                    InsertarPrivado(NumeroExpediente(CodigoCentroCarcelario(ListBox1.Text), thisDay.Year),
+                   thisDay.Year, TextBox1.Text, TextBox2.Text, TextBox3.Text, CodigoCentroCarcelario(ListBox1.Text),
+                   ListBox2.Text, ListBox3.Text);
+
+                    MessageBox.Show("PRIVADO REGISTRADO");
+                }
             }
             else
             {
@@ -33,6 +42,12 @@ namespace GestionPreventivos
             }
             TextBox1.Text = "";
             TextBox2.Text = "";
+            TextBox3.Text = "";
+            ListBox1.DataBind();
+            ListBox2.DataBind();
+            ListBox3.DataBind();
+            Response.Redirect("RegistroPrivado.aspx");
+
         }
 
         public int CodigoCentroCarcelario(String Nombre)
@@ -78,7 +93,7 @@ namespace GestionPreventivos
             conxx.Close();
             return 1;
         }
-        public void InsertarPrivado(int NoInicialExp, int ANIOEXP, String NOMBRE,String TELEFONO,String DIRECCION,int CPREVENTIVO)
+        public void InsertarPrivado(int NoInicialExp, int ANIOEXP, String NOMBRE,String TELEFONO,String DIRECCION,int CPREVENTIVO, String Ficha, String Computo)
         {
             SqlConnection conxx = new SqlConnection("Data Source=.;Initial Catalog = BDONG;Trusted_Connection=true;");
             conxx.Open();
@@ -92,6 +107,8 @@ namespace GestionPreventivos
             comxx.Parameters.Add("@TELEFONO ", SqlDbType.NVarChar).Value = TELEFONO;
             comxx.Parameters.Add("@DIRECCION", SqlDbType.NVarChar).Value = DIRECCION;
             comxx.Parameters.Add("@CPREVENTIVO", SqlDbType.NVarChar).Value = CPREVENTIVO;
+            comxx.Parameters.Add("@FICHA", SqlDbType.NVarChar).Value = Ficha;
+            comxx.Parameters.Add("@COMPUTO", SqlDbType.NVarChar).Value = Computo;
             comxx.ExecuteNonQuery();                
             conxx.Close();
             
