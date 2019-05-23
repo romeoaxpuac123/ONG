@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="Styles2.css">
+	<link rel="stylesheet" type="text/css" href="Styles3.css">
 </head>
 <body>
 <div class="container">
@@ -83,6 +83,30 @@
 					     <asp:TextBox type="text" class="form-control" placeholder="SALA" autocomplete="off" ID="TextBox5" runat="server" Style="text-transform: uppercase"></asp:TextBox>
                     </div>  
                     
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-edit"></i></span>
+						</div>
+						
+					     <asp:TextBox type="text" class="form-control" placeholder="PRISION AÑOS" autocomplete="off" ID="TextBox6" runat="server" Style="text-transform: uppercase"></asp:TextBox>
+                    </div>
+
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-edit"></i></span>
+						</div>
+						
+					     <asp:TextBox type="text" class="form-control" placeholder="MULTA" autocomplete="off" ID="TextBox7" runat="server" Style="text-transform: uppercase"></asp:TextBox>
+                    </div>
+
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-edit"></i></span>
+						</div>
+						
+					     <asp:TextBox type="text" class="form-control" placeholder="TIEMPO CUMPLIDO" autocomplete="off" ID="TextBox8" runat="server" Style="text-transform: uppercase"></asp:TextBox>
+                    </div>
+
                          <div class="form-group">
 						  <asp:Button type="submit" value="REGISTRO" class="btn float-right login_btn" ID="Button1" runat="server" Text="REGISTRO" OnClick="Button1_Click" />
 					</div>

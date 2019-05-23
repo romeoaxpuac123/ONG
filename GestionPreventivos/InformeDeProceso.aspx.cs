@@ -35,6 +35,9 @@ namespace GestionPreventivos
                 {
                     RegistrarProceso(CodigoDelito(ListBox1.Text), CodigoPrivado(TextBox1.Text),
                         TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text);
+
+                    InsertarPena(CodigoPrivado(TextBox1.Text), TextBox2.Text, TextBox6.Text,
+                        TextBox7.Text, TextBox8.Text);
                     MessageBox.Show("DATOS REGISTRADOS");
                 }
             }
@@ -43,6 +46,9 @@ namespace GestionPreventivos
             TextBox3.Text = "";
             TextBox4.Text = "";
             TextBox5.Text = "";
+            TextBox6.Text = "";
+            TextBox7.Text = "";
+            TextBox8.Text = "";
         }
         public Boolean EXistePrivado(String Nombre)
         {
@@ -129,6 +135,22 @@ namespace GestionPreventivos
             }
             conxx.Close();
             return 1;
+        }
+        public void InsertarPena(int PRIVADO, String EXPEDIENTE, String PRISION, String MULTA, String TIEMPOCUMPLIDO)
+        {
+            SqlConnection conxx = new SqlConnection("Data Source=.;Initial Catalog = BDONG;Trusted_Connection=true;");
+            conxx.Open();
+            SqlCommand comxx = new SqlCommand(); // Create a object of SqlCommand class
+            comxx.Connection = conxx; //Pass the connection object to Command
+            comxx.CommandType = CommandType.StoredProcedure; // We will use stored procedure.
+            comxx.CommandText = "INSERTARPENA"; //Stored Procedure Name
+            comxx.Parameters.Add("@PRIVADO", SqlDbType.NVarChar).Value = PRIVADO;
+            comxx.Parameters.Add("@EXPEDIENTE", SqlDbType.NVarChar).Value = EXPEDIENTE;
+            comxx.Parameters.Add("@PRISION", SqlDbType.NVarChar).Value = PRISION;
+            comxx.Parameters.Add("@MULTA ", SqlDbType.NVarChar).Value = MULTA;
+            comxx.Parameters.Add("@TIEMPOCUMPLIDO", SqlDbType.NVarChar).Value = TIEMPOCUMPLIDO;
+            comxx.ExecuteNonQuery();
+            conxx.Close();
         }
     }
 }
