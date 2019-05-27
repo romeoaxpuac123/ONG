@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>REGISTRO DELITO</title>
+	<title>REGISTRO CENTRO PREVENTIVO</title>
    <!--Made with love by Mutiullah Samim -->
    
 	<!--Bootsrap 4 CDN-->

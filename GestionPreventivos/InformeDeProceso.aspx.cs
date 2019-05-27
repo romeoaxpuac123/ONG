@@ -14,7 +14,10 @@ namespace GestionPreventivos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Codigo_Usuario"] == null)
+            {
+                Response.Redirect("INICIO.aspx");
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

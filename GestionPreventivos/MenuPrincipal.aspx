@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>REGISTRO DELITO</title>
+	<title>MENU PRINCIPAL</title>
    <!--Made with love by Mutiullah Samim -->
    
 	<!--Bootsrap 4 CDN-->
@@ -26,19 +26,37 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>MENU</h3>
+				<CENTER><h3>MENU</h3>
                 <h3>PRINCIPAL</h3>
-                
+                </CENTER>
 			</div>
+            <CENTER>
 		<div class="card-body">
 				<form id="form1" runat="server">
 			             					
 					<div class="form-group">
-						  <asp:Button type="submit" value="REGISTRO" class="btn float-right login_btn" ID="Button1" runat="server" OnClick="Button1_Click1" Text="INICIO" />
+						  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						  <asp:Button type="submit" value="REGISTRO" class="btn" ID="Button1" runat="server" OnClick="Button1_Click1" Text="REGISTRO PRIVADO" Height="57px" BackColor="#FFC312" Width="231px" />
+					&nbsp;<asp:Button type="submit" value="REGISTRO" class="btn" ID="Button2" runat="server" Text="REGISTRO DELITO" Height="57px" BackColor="#FFC312" OnClick="Button2_Click" Width="229px" />
+					      <br />
+					&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button type="submit" value="REGISTRO" class="btn" ID="Button3" runat="server" Text="CENTRO PREVENTIVO" Height="57px" BackColor="#FFC312" OnClick="Button3_Click" Width="230px" />
+					&nbsp;<asp:Button type="submit" value="REGISTRO" class="btn" ID="Button4" runat="server" Text="INFORME DE PROCESO" Height="57px" BackColor="#FFC312"  Width="228px" OnClick="Button4_Click" />
+					      <br />
+					      <br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <asp:Button type="submit" value="REGISTRO" class="btn" ID="Button5" runat="server" Text="BENEFICIO MAS CERCANO" Height="57px" BackColor="#FFC312"  Width="230px" OnClick="Button5_Click" />
+					      &nbsp;<asp:Button type="submit" value="REGISTRO" class="btn" ID="Button6" runat="server" Text="OTRAS SOLICITUDES" Height="57px" BackColor="#FFC312"  Width="228px" OnClick="Button6_Click"  />
+					      <br />
+					      <br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <asp:Button type="submit" value="REGISTRO" class="btn" ID="Button7" runat="server" Text="ESTADO DEL PROCESO" Height="57px" BackColor="#FFC312"  Width="230px" OnClick="Button7_Click"  />
+					      &nbsp;<asp:Button type="submit" value="REGISTRO" class="btn" ID="Button8" runat="server" Text="BENEFICIADOS" Height="57px" BackColor="#FFC312"  Width="228px" OnClick="Button8_Click"  />
+					      <br />
 					</div>
 				</form>
 			</div>
-			
+			</CENTER>
 		</div>
 	    <br />
 	</div>

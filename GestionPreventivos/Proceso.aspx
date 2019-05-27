@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>REGISTRO DELITO</title>
+	<title>BENEFICIO MAS CERCANO </title>
    <!--Made with love by Mutiullah Samim -->
    
 	<!--Bootsrap 4 CDN-->

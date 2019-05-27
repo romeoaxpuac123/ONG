@@ -25,6 +25,8 @@ namespace GestionPreventivos
                 MessageBox.Show("BIENVENIDO");
                 TextBox1.Text = "";
                 TextBox2.Text = "";
+                Session["Codigo_Usuario"] = "MILTON";
+                Response.Redirect("MenuPrincipal.aspx");
             }
             else
             {
