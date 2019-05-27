@@ -136,6 +136,8 @@
     <Content Include="InformeDeProceso.aspx" />
     <Content Include="INICIO.aspx" />
     <Content Include="MenuPrincipal.aspx" />
+    <Content Include="Proceso.aspx" />
+    <Content Include="RegistroBeneficiario.aspx" />
     <Content Include="RegistroCentroPreventivo.aspx" />
     <Content Include="RegistroDelito.aspx" />
     <Content Include="RegistroPrivado.aspx" />
@@ -230,7 +232,21 @@
     <Compile Include="MenuPrincipal.aspx.designer.cs">
       <DependentUpon>MenuPrincipal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Proceso.aspx.cs">
+      <DependentUpon>Proceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proceso.aspx.designer.cs">
+      <DependentUpon>Proceso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroBeneficiario.aspx.cs">
+      <DependentUpon>RegistroBeneficiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroBeneficiario.aspx.designer.cs">
+      <DependentUpon>RegistroBeneficiario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistroCentroPreventivo.aspx.cs">
       <DependentUpon>RegistroCentroPreventivo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
