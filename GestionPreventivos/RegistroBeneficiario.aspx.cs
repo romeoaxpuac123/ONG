@@ -28,6 +28,10 @@ namespace GestionPreventivos
             {
                 MessageBox.Show("NO EXISTE EL PRIVADO EN LA BD");
             }
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            TextBox4.Text = "";
         }
         public int CodigoPrivado(String Nombre)
         {
